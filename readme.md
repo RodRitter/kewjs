@@ -1,7 +1,5 @@
-## Kew
-### Lightweight alternative to jQuery
-
-Kew is a lightweight alternative to jQuery selectors.
+# KewJS
+### Lightweight alternative to jQuery selectors
 
 ### Usage
 
