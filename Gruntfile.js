@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     uglify: {
       build: {
         src: 'kew.js',
-        dest: 'kew.min.js'
+        dest: 'dist/kew.min.js'
       }
     }
   });
