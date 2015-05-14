@@ -1,25 +1,25 @@
 ## Kew
 ### Lightweight alternative to jQuery
 
-Kew is a lightweight alternative to the jQuery library. It consists of a few useful functions and doesn't have the bulk that jQuery has.
+Kew is a lightweight alternative to jQuery selectors.
 
 ### Usage
 
 #### Initialize kew.js
 
-##### Include the library in your page
+Include the library in your page
 ```javascript
     <script src="path/to/kew.js"></script>
 ```
 
-##### Check if document is loaded
+#### 1. Document ready
 ```javascript
     $.ready(function(){
         // code to be executed after document has loaded
     });
 ```
 
-#### 1. Query Selector
+#### 2. Query Selector
 ```javascript
     $.get('css selector').function();
 ```
