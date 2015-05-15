@@ -3,7 +3,7 @@
 
 ### Usage
 
-Download library (`dist/kew.min.js`)
+:arrow_down: [Download](https://raw.githubusercontent.com/RodRitter/kewjs/master/dist/kew.min.js) 
 
 #### Initialize kew.js
 
