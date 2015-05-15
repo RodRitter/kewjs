@@ -1,9 +1,9 @@
 # KewJS
-### Lightweight alternative to jQuery selectors
-
-### Usage
+### Lightweight alternative to jQuery selectors & some basic utilities
 
 :arrow_down: [Download](https://raw.githubusercontent.com/RodRitter/kewjs/master/dist/kew.min.js)
+
+### Usage
 
 #### Initialize kew.js
 
@@ -19,11 +19,18 @@ Include the library in your page
     });
 ```
 
-#### 2. Query Selector
+#### 2. $.get() Selector
+You can select an element by using a CSS type selection.
+
+##### Examples
 ```javascript
-    $.get('css selector').function();
+    $.get('div');
+    $.get('.foo div');
+    $.get('#foo.bar');
 ```
-`$.get()` has a few functions:
+
+#### 3. Basic Selection Methods
+
 * `list()`
     - returns an array of elements
 * `first()`
@@ -52,7 +59,7 @@ Include the library in your page
         el.style.color = 'red';
     });
 ```
-#### 3. Attributes, Classes & ID's
+#### 4. Attributes, Classes & ID's
 
 Easily add attributes to elements
 * `.attr(attributeName, attributeValue)`
@@ -65,19 +72,19 @@ Easily add attributes to elements
     $.get('.foo').attr('class', 'newClass');
 ```
 
-#### 4. Removing Elements
+#### 5. Removing Elements
 Remove element with this handy function
 * `remove(cmd)`
-    - cmd is replaced with `all`, `first` or 'last' or an integer for the zero-based index
+    - cmd is replaced with `all`, `first` or `last` - or an integer for the zero-based index
 
 ##### Examples
 
 ###### Using `remove()`
 ```javascript
-    $.get('.foo').remove('all'); // removes all elements
-    $.get('.foo').remove('first'); // removes the first element
-    $.get('.foo').remove('last'); // removes the last element
-    $.get('.foo').remove(2); // remove the 3rd element
-    $.get('.foo').remove(0); // remove the 1st element
-    $.get('.foo').remove(8); // remove the 9th element
+    $.get('.foo').remove('all'); // removes all .foo elements
+    $.get('.foo').remove('first'); // removes the first .foo element
+    $.get('.foo').remove('last'); // removes the last .foo element
+    $.get('.foo').remove(2); // remove the 3rd .foo element
+    $.get('.foo').remove(0); // remove the 1st .foo element
+    $.get('.foo').remove(8); // remove the 9th .foo element
 ```
