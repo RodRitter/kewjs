@@ -1,5 +1,5 @@
 # KewJS
-### Lightweight alternative to jQuery selectors & some basic utilities
+### Lightweight alternative to jQuery selectors & basic utilities
 
 :arrow_down: [Download](https://raw.githubusercontent.com/RodRitter/kewjs/master/dist/kew.min.js)
 
