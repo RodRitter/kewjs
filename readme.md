@@ -1,13 +1,15 @@
-# KewJS
+# KewJS 
 ### Lightweight alternative to jQuery selectors
 
 ### Usage
+
+Download library (`dist/kew.min.js`)
 
 #### Initialize kew.js
 
 Include the library in your page
 ```javascript
-    <script src="path/to/kew.js"></script>
+    <script src="path/to/kew.min.js"></script>
 ```
 
 #### 1. Document ready
