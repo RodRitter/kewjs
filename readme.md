@@ -64,3 +64,20 @@ Easily add attributes to elements
 ```javascript
     $.get('.foo').attr('class', 'newClass');
 ```
+
+#### 4. Removing Elements
+Remove element with this handy function
+* `remove(cmd)`
+    - cmd is replaced with `all`, `first` or 'last' or an integer for the zero-based index
+
+##### Examples
+
+###### Using `remove()`
+```javascript
+    $.get('.foo').remove('all'); // removes all elements
+    $.get('.foo').remove('first'); // removes the first element
+    $.get('.foo').remove('last'); // removes the last element
+    $.get('.foo').remove(2); // remove the 3rd element
+    $.get('.foo').remove(0); // remove the 1st element
+    $.get('.foo').remove(8); // remove the 9th element
+```
