@@ -1,9 +1,9 @@
-# KewJS 
+# KewJS
 ### Lightweight alternative to jQuery selectors
 
 ### Usage
 
-:arrow_down: [Download](https://raw.githubusercontent.com/RodRitter/kewjs/master/dist/kew.min.js) 
+:arrow_down: [Download](https://raw.githubusercontent.com/RodRitter/kewjs/master/dist/kew.min.js)
 
 #### Initialize kew.js
 
@@ -52,6 +52,15 @@ Include the library in your page
         el.style.color = 'red';
     });
 ```
+#### 3. Attributes, Classes & ID's
 
+Easily add attributes to elements
+* `.attr(attributeName, attributeValue)`
+    - adds attributes to elements
 
+##### Examples
 
+###### Using `attr()`
+```javascript
+    $.get('.foo').attr('class', 'newClass');
+```
