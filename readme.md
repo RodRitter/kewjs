@@ -31,16 +31,27 @@ Include the library in your page
 * `each(function(el))`
     - loops through the array of elements
 
-```javascript
-    // list()
-    var allDivs = $.get('div').list();
-    
-    // first()
-    var logoEl = $.get('#logo').first();
+##### Examples
 
-    // each()
+###### Using `list()`
+```javascript
+    var allDivs = $.get('div').list();
+    allDivs[0].style.color = 'blue';
+    allDivs[1].style.color = 'red';
+```
+
+###### Using `first()`
+```javascript  
+    var logoEl = $.get('#logo').first();
+    logoEl.style.border = '1px solid black';
+```
+
+###### Using `each()`
+```javascript
     $.get('div').each(function(el) {
         el.style.color = 'red';
     });
-
 ```
+
+
+
