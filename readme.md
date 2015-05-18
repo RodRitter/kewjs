@@ -19,14 +19,14 @@ Include the library in your page
     });
 ```
 
-#### 2. $.get() Selector
+#### 2. $.find() Selector
 You can select an element by using a CSS type selection.
 
 ##### Examples
 ```javascript
-    $.get('div');
-    $.get('.foo div');
-    $.get('#foo.bar');
+    $.find('div');
+    $.find('.foo div');
+    $.find('#foo.bar');
 ```
 
 #### 3. Basic Selection Methods
@@ -42,20 +42,20 @@ You can select an element by using a CSS type selection.
 
 ###### Using `list()`
 ```javascript
-    var allDivs = $.get('div').list();
+    var allDivs = $.find('div').list();
     allDivs[0].style.color = 'blue';
     allDivs[1].style.color = 'red';
 ```
 
 ###### Using `first()`
 ```javascript  
-    var logoEl = $.get('#logo').first();
+    var logoEl = $.find('#logo').first();
     logoEl.style.border = '1px solid black';
 ```
 
 ###### Using `each()`
 ```javascript
-    $.get('div').each(function(el) {
+    $.find('div').each(function(el) {
         el.style.color = 'red';
     });
 ```
@@ -69,7 +69,7 @@ Easily add attributes to elements
 
 ###### Using `attr()`
 ```javascript
-    $.get('.foo').attr('class', 'newClass');
+    $.find('.foo').attr('class', 'newClass');
 ```
 
 #### 5. Removing Elements
@@ -81,10 +81,10 @@ Remove element with this handy function
 
 ###### Using `remove()`
 ```javascript
-    $.get('.foo').remove('all'); // removes all .foo elements
-    $.get('.foo').remove('first'); // removes the first .foo element
-    $.get('.foo').remove('last'); // removes the last .foo element
-    $.get('.foo').remove(2); // remove the 3rd .foo element
-    $.get('.foo').remove(0); // remove the 1st .foo element
-    $.get('.foo').remove(8); // remove the 9th .foo element
+    $.find('.foo').remove('all'); // removes all .foo elements
+    $.find('.foo').remove('first'); // removes the first .foo element
+    $.find('.foo').remove('last'); // removes the last .foo element
+    $.find('.foo').remove(2); // remove the 3rd .foo element
+    $.find('.foo').remove(0); // remove the 1st .foo element
+    $.find('.foo').remove(8); // remove the 9th .foo element
 ```
