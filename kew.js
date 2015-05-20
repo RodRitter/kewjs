@@ -1,56 +1,37 @@
 (function(window){
-	var $ = {
+	var $kew = function(selector, context) {
+		if ( window === this ) {
+            return new $kew(selector);
+        }
+		var els = (context || document).querySelectorAll(selector);
+		this.elements = els;
+		this.length = els.length;
+		return this;
+	}
+
+	$kew.prototype = {
 		ready: function(callback){
 			document.addEventListener("DOMContentLoaded", callback);
 		},
-		find: function(selector, context) {
-			var selection = (context || document).querySelectorAll(selector);
-			return {
-				list: function() {
-					return selection;
-				},
-				first: function(){
-					return selection[0];
-				},
-				each: function(callback) {
-					for(var i=0; i<selection.length; i++) {
-						callback(selection[i]);
-					}
-				},
-				attr: function(attrName, attrValue) {
-					if(typeof attrName === 'string' && typeof attrValue === 'string') {
-						for (var i = 0; i < selection.length; i++) {
-							var attr = selection[i].getAttribute(attrName) === null ? '' : selection[i].getAttribute(attrName);
-							selection[i].setAttribute(attrName, attr+' '+attrValue);
-						}
-					}
-				},
-				remove: function(which) {
-					if(typeof which == 'number') {
-						selection[Math.floor(which)].parentElement.removeChild(selection[Math.floor(which)]);
-					} else {
-						switch(which) {
-							case 'all':
-								for (var i = 0; i < selection.length; i++) {
-									selection[i].parentElement.removeChild(selection[i]);
-								}
-								break;
-							case 'first':
-								selection[0].parentElement.removeChild(selection[0]);
-								break;
-							case 'last':
-								selection[selection.length-1].parentElement.removeChild(selection[selection.length-1]);
-								break;
-							default:
-								console.warning('Kew Warning: No argument specified to remove() function. Applying to ALL selected elements.');
-								for (var i = 0; i < selection.length; i++) {
-									selection[i].parentElement.removeChild(selection[i]);
-								}
-						}
-					}
+		each: function(callback) {
+			for(var i=0; i<this.length; i++) {
+				callback(this.elements[i]);
+			}
+		},
+		attr: function(attrName, attrValue) {
+			if(typeof attrName === 'string' && typeof attrValue === 'string') {
+				for (var i = 0; i < this.length; i++) {
+					var attr = this.elements[i].getAttribute(attrName) === null ? '' : this.elements[i].getAttribute(attrName);
+					this.elements[i].setAttribute(attrName, attr+' '+attrValue);
 				}
+			}
+		},
+		remove: function() {
+			for (var i = 0; i < this.length; i++) {
+				this.elements[i].parentElement.removeChild(this.elements[i]);
 			}
 		}
 	}
-	window.$ = $;
+
+	window.$kew = $kew;
 })(typeof window != 'undefined' ? window : undefined);
