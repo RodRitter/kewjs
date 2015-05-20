@@ -1,7 +1,7 @@
 (function(window){
 	var $ = {
 		ready: function(callback){
-			document.addEventListener("DOMContentLoaded", callback());
+			document.addEventListener("DOMContentLoaded", callback);
 		},
 		find: function(selector, context) {
 			var selection = (context || document).querySelectorAll(selector);
