@@ -14,7 +14,7 @@ Include the library in your page
 
 #### 1. Document ready
 ```javascript
-    $kew.ready(function(){
+    $kew().ready(function(){
         // code to be executed after document has loaded
     });
 ```
