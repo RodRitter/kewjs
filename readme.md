@@ -31,13 +31,6 @@ You can select an element by using a CSS type selection.
 
 #### 3. Utilities
 
-* `each(function(el))`
-    - loops through the array of elements and executes function
-* `attr(attrName, attrValue)`
-    - add attributes to elements
-* `remove()`
-    - remove selected elements
-
 ##### each()
 ```javascript
 // Loops through all selected elements and executes function
