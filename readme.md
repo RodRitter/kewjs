@@ -37,3 +37,33 @@ You can select an element by using a CSS type selection.
     - add attributes to elements
 * `remove()`
     - remove selected elements
+
+##### each()
+```javascript
+// Loops through all selected elements and executes function
+$kew('#foo').each(function(el) {
+    console.log(el.innerHTML);
+})
+```
+
+##### attr()
+```javascript
+// Adds an attribute to all selected elements
+$kew('#foo').attr('data-custom', 'myValue');
+
+// result: <div id="foo" data-custom="myValue"></div>
+```
+
+##### class()
+```javascript
+// Inherits from attr() - adds a class to an element
+$kew('#foo').class('bar');
+
+// result: <div id="foo" class="bar"></div>
+```
+
+##### remove()
+```javascript
+// Removes selected elements from the document
+$kew('#foo').remove();
+```

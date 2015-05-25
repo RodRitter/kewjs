@@ -26,6 +26,9 @@
 				}
 			}
 		},
+		class: function(className) {
+				this.attr('class', className);
+		},
 		remove: function() {
 			for (var i = 0; i < this.length; i++) {
 				this.elements[i].parentElement.removeChild(this.elements[i]);
