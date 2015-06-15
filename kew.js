@@ -1,12 +1,11 @@
 (function (window) {
     var $kew = function (selector, context) {
-        if (window === this) {
-            return new $kew(selector);
-        }
-        var els = (context || document).querySelectorAll(selector);
-        this.elements = els;
-        this.length = els.length;
-        return this;
+        var self = this;
+
+        self.elements = (context || document).querySelectorAll(selector);
+        self.length   = self.elements.length;
+
+        return self;
     };
 
     $kew.prototype = {
@@ -43,5 +42,7 @@
         }
     };
 
-    window.$kew = $kew;
+    window.$kew = function (selector, context) {
+        return new $kew(selector, context);
+    };
 })(window);
