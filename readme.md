@@ -49,7 +49,7 @@ $kew('#foo').attr('data-custom', 'myValue');
 
 ##### class()
 ```javascript
-// Inherits from attr() - adds a class to an element
+// An alias of attr() - adds a class to an element
 $kew('#foo').class('bar');
 
 // result: <div id="foo" class="bar"></div>
