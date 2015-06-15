@@ -1,6 +1,6 @@
-(function(window){
+(function(window) {
 	var $kew = function(selector, context) {
-		if ( window === this ) {
+		if (window === this) {
             return new $kew(selector);
         }
 		var els = (context || document).querySelectorAll(selector);
@@ -10,24 +10,29 @@
 	}
 
 	$kew.prototype = {
-		ready: function(callback){
+		ready: function(callback) {
 			document.addEventListener("DOMContentLoaded", callback);
 		},
 		each: function(callback) {
-			for(var i=0; i<this.length; i++) {
+			for (var i = 0; i < this.length; i++) {
 				callback(this.elements[i]);
 			}
 		},
 		attr: function(attrName, attrValue) {
-			if(typeof attrName === 'string' && typeof attrValue === 'string') {
+			if (typeof attrName === 'string' && typeof attrValue === 'string') {
 				for (var i = 0; i < this.length; i++) {
-					var attr = this.elements[i].getAttribute(attrName) === null ? '' : this.elements[i].getAttribute(attrName);
-					this.elements[i].setAttribute(attrName, attr+' '+attrValue);
+					var attr = '';
+                    
+                    if (this.elements[i].getAttribute(attrName) !== 'undefined') {
+                        attr = this.elements[i].getAttribute(attrName);
+                    }
+
+					this.elements[i].setAttribute(attrName, attr + ' ' + attrValue);
 				}
 			}
 		},
 		class: function(className) {
-				this.attr('class', className);
+			this.attr('class', className);
 		},
 		remove: function() {
 			for (var i = 0; i < this.length; i++) {
