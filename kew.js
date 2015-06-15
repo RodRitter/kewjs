@@ -44,4 +44,4 @@
     };
 
     window.$kew = $kew;
-})(typeof window != 'undefined' ? window : undefined);
+})(window);
