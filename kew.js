@@ -37,8 +37,24 @@
             }
         },
 
-        class: function (className) {
-            this.attr('class', className);
+        addClass: function (className) {
+            var self = this;
+
+            self.each(function (element) {
+                element.classList.add(className)
+            });
+
+            return self;
+        },
+
+        removeClass: function (className) {
+            var self = this;
+
+            self.each(function (element) {
+                element.classList.remove(className);
+            });
+
+            return self;
         },
 
         remove: function () {

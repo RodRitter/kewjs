@@ -57,15 +57,24 @@ $kew('#foo').attr('data-custom', 'myValue');
 // result: <div id="foo" data-custom="myValue"></div>
 ```
 
-### `$kew.class()`
+### `$kew.addClass()`
 
-Add a class to an element (alias of `$kew.attr()`);
+Add a class to each selected elements.
 
 **Example**
 
 ```javascript
-$kew('#foo').class('bar');
-// result: <div id="foo" class="bar"></div>
+$kew('#foo').addClass('bar');
+```
+
+### `$kew.removeClass()`
+
+Remove a class from each selected elements.
+
+**Example**
+
+```javascript
+$kew('#foo').addClass('bar');
 ```
 
 ### `$kew.remove()`
