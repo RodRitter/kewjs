@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            #foo {
+                background-color: red;
+                width: 40px;
+                height: 40px;
+            }
+
+            .test {
+                background-color: yellow !important;
+            }
+        </style>
+        <script src="dist/kew.min.js"></script>
+        <script>
+            $kew().ready(function () {
+                $kew('#foo').class('test');
+            });
+        </script>
+    </head>
+    <body>
+        <div id="foo"></div>
+    </body>
+</html>
