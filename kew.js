@@ -17,7 +17,7 @@
             var self = this;
 
             for (var i = 0; i < self.length; i++) {
-                callback(self.elements[i]);
+                callback(self.elements[i], i, self.elements);
             }
 
             return self;
