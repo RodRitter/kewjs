@@ -12,11 +12,17 @@
         ready: function (callback) {
             document.addEventListener("DOMContentLoaded", callback);
         },
+
         each: function (callback) {
-            for (var i = 0; i < this.length; i++) {
-                callback(this.elements[i]);
+            var self = this;
+
+            for (var i = 0; i < self.length; i++) {
+                callback(self.elements[i]);
             }
+
+            return self;
         },
+
         attr: function (attrName, attrValue) {
             if (typeof attrName === 'string' && typeof attrValue === 'string') {
                 for (var i = 0; i < this.length; i++) {
