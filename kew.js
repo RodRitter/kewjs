@@ -1,11 +1,9 @@
 (function (window) {
     var $kew = function (selector, context) {
-        var self = this;
+        this.elements = (context || document).querySelectorAll(selector);
+        this.length   = this.elements.length;
 
-        self.elements = (context || document).querySelectorAll(selector);
-        self.length   = self.elements.length;
-
-        return self;
+        return this;
     };
 
     $kew.prototype = {
@@ -14,13 +12,11 @@
         },
 
         each: function (callback) {
-            var self = this;
-
-            for (var i = 0; i < self.length; i++) {
-                callback(self.elements[i], i, self.elements);
+            for (var i = 0; i < this.length; i++) {
+                callback(this.elements[i], i, this.elements);
             }
 
-            return self;
+            return this;
         },
 
         attr: function (attrName, attrValue) {
@@ -38,23 +34,19 @@
         },
 
         addClass: function (className) {
-            var self = this;
-
-            self.each(function (element) {
+            this.each(function (element) {
                 element.classList.add(className)
             });
 
-            return self;
+            return this;
         },
 
         removeClass: function (className) {
-            var self = this;
-
-            self.each(function (element) {
+            this.each(function (element) {
                 element.classList.remove(className);
             });
 
-            return self;
+            return this;
         },
 
         remove: function () {
