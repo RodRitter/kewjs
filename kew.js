@@ -35,7 +35,7 @@
 
         addClass: function (className) {
             this.each(function (element) {
-                element.classList.add(className)
+                element.classList.add(className);
             });
 
             return this;
