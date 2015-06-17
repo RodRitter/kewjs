@@ -1,62 +1,91 @@
 # KewJS
-### Lightweight alternative to jQuery selectors & basic utilities
 
-:arrow_down: [Download](https://raw.githubusercontent.com/RodRitter/kewjs/master/dist/kew.min.js)
+Lightweight alternative to jQuery selectors & basic utilities
 
-### Usage
+* :arrow_down: [Download](https://raw.githubusercontent.com/RodRitter/kewjs/master/dist/kew.min.js)
 
-#### Initialize kew.js
+## Usage
 
-Include the library in your page
-```javascript
-    <script src="path/to/kew.min.js"></script>
-```
+1. Include the library in your page `<script src="path/to/kew.min.js"></script>`
 
-#### 1. Document ready
+## Documentation
+
+### `$kew().ready()`
+
+Execute a callback when the DOM is ready.
+
+**Example**
+
 ```javascript
     $kew().ready(function(){
         // code to be executed after document has loaded
     });
 ```
 
-#### 2. $kew() Selector
-You can select an element by using a CSS type selection.
+### `$kew()`
 
-##### Examples
+Select elements based on a CSS selector.
+
+**Example**
+
 ```javascript
     $kew('div');
     $kew('.foo div');
     $kew('#foo.bar');
 ```
 
-#### 3. Utilities
+### `$kew.each()`
 
-##### each()
+Execute a callback for each element.
+
+**Example**
+
 ```javascript
-// Loops through all selected elements and executes function
 $kew('#foo').each(function(el) {
     console.log(el.innerHTML);
-})
+});
 ```
 
-##### attr()
-```javascript
-// Adds an attribute to all selected elements
-$kew('#foo').attr('data-custom', 'myValue');
+### `$kew.attr()`
 
+Adds an attribute to all selected elements.
+
+**Example**
+
+```javascript
+$kew('#foo').attr('data-custom', 'myValue');
 // result: <div id="foo" data-custom="myValue"></div>
 ```
 
-##### class()
-```javascript
-// An alias of attr() - adds a class to an element
-$kew('#foo').class('bar');
+### `$kew.addClass()`
 
-// result: <div id="foo" class="bar"></div>
+Add a class to each selected elements.
+
+**Example**
+
+```javascript
+$kew('#foo').addClass('bar');
 ```
 
-##### remove()
+### `$kew.removeClass()`
+
+Remove a class from each selected elements.
+
+**Example**
+
 ```javascript
-// Removes selected elements from the document
+$kew('#foo').addClass('bar');
+```
+
+### `$kew.remove()`
+
+Removes selected elements from the document.
+
+```javascript
 $kew('#foo').remove();
 ```
+
+## Install
+
+1. Install NodeJS
+2. `npm install`
