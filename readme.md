@@ -74,18 +74,14 @@ Remove a class from each selected elements.
 **Example**
 
 ```javascript
-$kew('#foo').addClass('bar');
+$kew('#foo').removeClass('bar');
 ```
 
-### `$kew.remove()`
+### `$kew.removeElements()`
 
 Removes selected elements from the document.
 
 ```javascript
-$kew('#foo').remove();
+$kew('#foo').removeElements();
 ```
 
-## Install
-
-1. Install NodeJS
-2. `npm install`
