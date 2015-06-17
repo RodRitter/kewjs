@@ -85,3 +85,14 @@ Removes selected elements from the document.
 $kew('#foo').removeElements();
 ```
 
+## Contributor Setup
+If you would like to contribute and you will make modifications to `kew.js`, then you will need to make sure you have NodeJS to install. You can get it [here](https://nodejs.org/).
+```javascript
+C:\> cd path/to/project/kewjs
+C:\path\to\project\kewjs> grunt
+Running "uglify:build" (uglify) task
+
+Done, without errors.
+
+C:\path\to\project\kewjs>
+```
